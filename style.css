@@ -1,0 +1,146 @@
+header {
+  background: url("img/Group\ 2047.png") center/cover;
+}
+
+.gradin {
+  background: linear-gradient(165deg, #C900FC 0%, #8287FF 51.87%, #377BFF 67.33%, #377BFF 100%);
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+    opacity: .3;
+  }
+
+  50% {
+    transform: translateX(200px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: .3;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  50% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.img-card {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.img-card.left-animation {
+  animation-name: moveLeft;
+}
+
+.img-card.right-animation {
+  animation-name: moveRight;
+}
+
+.line {
+  background: linear-gradient(165deg, #C900FC 0%, #8287FF 51.87%, #377BFF 67.33%, #377BFF 100%);
+}
+
+.raiting {
+  display: flex;
+  width: 424px;
+  padding: 40px 237px 32px 40px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 5px;
+  gap: 48px;
+  border-radius: 24px;
+  background: #F8F8F9;
+  scale: 1;
+  box-shadow: 0 0 0 0 inset rgb(255, 212, 255);
+  transition: .4s;
+}
+.raiting:hover{
+  scale: .8 ;
+  box-shadow: 0 0 0 400px inset rgb(202, 243, 255);
+  transform: rotate(20deg);
+}
+
+
+
+#rtng {
+  color: #000;
+  font-family: TT Fors;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+}
+
+#desc {
+  color: #000;
+  font-family: TT Fors;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  opacity: 0.5;
+}
+
+.nam-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+}
+
+.sol {
+  position: absolute;
+  left: -100px;
+  top: -200px;
+  width: 400px;
+  height: 400px;
+  transform: rotate(-180.804deg);
+  /* flex-shrink: 0; */
+  background: #a054fe;
+  filter: blur(210px);
+}
+
+.sag {
+
+  position: absolute;
+  right: -200px;
+  bottom: -100px;
+  width: 400.073px;
+  height: 400.136px;
+  transform: rotate(128.889deg);
+  flex-shrink: 0;
+  border-radius: 719.136px;
+  opacity: 0.8799999952316284;
+  background: #3985F6;
+  filter: blur(218.84896850585938px)
+}
+button , .contetnt-btn {
+  transition: .5s ease-out;
+}
+button:hover , .contetnt-btn:hover {
+  background: #5700c1;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .raiting {
+    align-items: center !important;
+    justify-content: center;
+  }
+}
