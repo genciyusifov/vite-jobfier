@@ -43,7 +43,7 @@ function objectController({ img, what, description }) {
        ${description}
     </div>
     <div class="line h-[1.5px] w-[343px] mx-auto "></div>
-    <div class="button flex  items-center pl-7 pb-4">
+    <div class="button flex  items-center  pl-7 pb-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
             <rect width="40" height="40" rx="20" fill="#785BF4"/>
             <mask id="mask0_1_156" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="24" height="24">
@@ -91,7 +91,27 @@ setInterval(() => {
 }, 10000);
 
 const icon = document.querySelector('.nav-icon-1');
-  icon.addEventListener('click', (event) => {
-    icon.classList.toggle("open");
+icon.addEventListener('click', (event) => {
+  icon.classList.toggle("open");
 
 });
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+
+const burger = document.querySelector(".burger")
+const right = document.querySelector(".right")
+
+burger.onclick = ()=> {
+  right.classList.toggle("rightN")
+}
+
+const header = document.querySelector('header');

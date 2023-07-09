@@ -1,5 +1,11 @@
+*{
+  box-sizing: border-box;
+  font: sans-serif;
+}
+
 header {
   background: url("img/Group\ 2047.png") center/cover;
+  transition: background-position 0.5s ease;
 }
 
 .gradin {
@@ -30,6 +36,7 @@ header {
 
   50% {
     transform: translateX(-200px);
+    opacity: 0.3;
   }
 
   100% {
@@ -37,6 +44,27 @@ header {
   }
 }
 
+
+
+.nosubmit{
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  outline : none
+}
+
+.nosubmit::placeholder {
+  color: #000000;
+  font-weight: 600;
+}
+
+
+.nosubmit {
+  padding: 9px 4px 9px 40px;
+   background: transparent url("img/download.svg") no-repeat 13px center;
+}
 .img-card {
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -70,9 +98,9 @@ header {
   transition: .4s;
 }
 .raiting:hover{
-  scale: .8 ;
-  box-shadow: 0 0 0 400px inset rgb(202, 243, 255);
-  transform: rotate(20deg);
+  scale: .9 ;
+  box-shadow: 0 0 400px 400px inset rgb(202, 243, 255);
+  transform: rotate(10deg);
 }
 
 
@@ -111,11 +139,10 @@ header {
   width: 400px;
   height: 400px;
   transform: rotate(-180.804deg);
-  /* flex-shrink: 0; */
   background: #a054fe;
   filter: blur(210px);
 }
-
+  
 .sag {
 
   position: absolute;
@@ -138,9 +165,66 @@ button:hover , .contetnt-btn:hover {
 }
 
 
-@media only screen and (max-width: 600px) {
+:root {
+  --marquee-width: 80vw;
+  --marquee-height: 20vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.marquee-content {
+  list-style: none; 
+  height: 100vh;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  height: 100px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 900px) {
   .raiting {
     align-items: center !important;
     justify-content: center;
   }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .right{
+    transition: 1s;
+   transform: translate(200%) !important;
+   padding: 20px 10px;
+   border-radius: 20px;
+  }
+}
+.rightN{
+  transform: translate(40%) !important;
 }
