@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage":"https://www.genciyusifov.github.io/vite-jobfier",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
