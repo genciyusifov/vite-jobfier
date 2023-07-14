@@ -1,23 +1,23 @@
-// import "./input.css"
+import "./input.css"
 import "./style.css"
-
+import Frame from "./img/Frame.png";
 const cardsEl = document.querySelector(".cards")
 const obj = [
   {
     id: 1,
-    img: "img/Frame.png",
+    img: Frame,
     what: "Iş axtarın",
     description: "Pulsuz giriş imkanı ilə yeni iş imkanlarını kəşf edin və karyeranızda növbəti addımı atın."
   },
   {
     id: 1,
-    img: "img/Frame.png",
+    img: Frame,
     what: "Iş axtarın",
     description: "Pulsuz giriş imkanı ilə yeni iş imkanlarını kəşf edin və karyeranızda növbəti addımı atın."
   },
   {
     id: 1,
-    img: "img/Frame.png",
+    img: Frame,
     what: "Iş axtarın",
     description: "Pulsuz giriş imkanı ilə yeni iş imkanlarını kəşf edin və karyeranızda növbəti addımı atın."
   }
