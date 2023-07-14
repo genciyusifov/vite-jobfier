@@ -1,4 +1,4 @@
-import "./input.css"
+// import "./input.css"
 import "./style.css"
 
 const cardsEl = document.querySelector(".cards")
@@ -114,4 +114,4 @@ burger.onclick = ()=> {
   right.classList.toggle("rightN")
 }
 
-const header = document.querySelector('header');
+const dex = document.querySelector(".asss")
